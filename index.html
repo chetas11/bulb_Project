@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Bulb</title>
+</head>
+<body>
+        <h1 id="heading"></h1>
+    <div class="container">
+        <img id="bulb" src="./off.png" alt="Bulb"><br><br>
+        <button class="btn btn-outline-dark" onclick="on()">On</button>
+        <button class="btn btn-outline-dark" onclick="off()">Off</button>
+    </div>
+
+    <Script>
+        function on(){
+            document.getElementById("bulb").src = "./on.png"
+            document.getElementById("heading").innerHTML = "Perfect !"
+        }
+
+        function off(){
+            document.getElementById("bulb").src = "./off.png"
+            document.getElementById("heading").innerHTML = "Perfect !"
+        }
+
+        var d = new Date();
+        var n = d.getHours();
+
+
+        if(n >= 6 && n < 19){
+            document.body.style.backgroundColor = "antiquewhite";
+            document.getElementById("heading").innerHTML =  "Sun is Shining lets save the energy turn off the Bulb!"
+            document.getElementById("bulb").src = "./on.png"
+
+            
+        }else{
+            document.body.style.backgroundColor = "black";
+            document.getElementById("heading").innerHTML =  "Night Time lets Turn on the Bulb!"
+            document.getElementById("bulb").src = "./off.png"
+        }  
+
+
+    </Script>
+
+    
+</body>
+</html>
